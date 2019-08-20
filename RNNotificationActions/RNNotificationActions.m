@@ -2,7 +2,13 @@
 #import "RNNotificationActions.h"
 #import "RNNotificationActionsManager.h"
 
-#import <React/RCTBridge.h>
+#if __has_include(<React/RCTBridge.h>)
+  #import <React/RCTBridge.h>
+#elif __has_include("RCTBridge.h")
+  #import "RCTBridge.h"
+#else   #else
+  #import "React/RCTBridge.h"
+#endif
 #import <React/RCTConvert.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTUtils.h>
