@@ -41,9 +41,9 @@ export const updateCategories = (categories) => {
 
   RNNotificationActions.updateCategories(cats);
   // Re-update when permissions change
-  NativeAppEventEmitter.addListener('remoteNotificationsRegistered', () => {
-    RNNotificationActions.updateCategories(cats);
-  });
+  // NativeAppEventEmitter.addListener('remoteNotificationsRegistered', () => {
+    // RNNotificationActions.updateCategories(cats);
+  // });
 };
 
 
